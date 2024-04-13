@@ -1,0 +1,15 @@
+To kill the process associated with port 2181, you first need to find the PID (Process ID) of the process using the port. You can use the `lsof` command I mentioned earlier:
+
+```bash
+sudo lsof -i :2181
+```
+
+This command will show you the PID of the process using port 2181. Once you have the PID, you can use the `kill` command to terminate the process. Replace `<PID>` with the actual PID you found:
+
+```bash
+sudo kill <PID>
+```
+
+After killing the process, port 2181 will be free and available for use by ZooKeeper or any other service. If the process doesn't terminate gracefully, you can use `kill -9 <PID>` to force the process to terminate.
+
+Let me know if you need further assistance!
